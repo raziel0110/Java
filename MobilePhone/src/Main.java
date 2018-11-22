@@ -17,8 +17,11 @@ public class Main {
         iphone.listContact();
 
         iphone.call("0756028001");
+        ((Iphone7) iphone).getBatteryLifeAfterCall();
         iphone.call("0145647247");
+        ((Iphone7) iphone).getBatteryLifeAfterCall();
         iphone.call("0753068270");
+        ((Iphone7) iphone).getBatteryLifeAfterCall();
         iphone.viewHistory();
 
         iphone.sendMessage("0753068270","Salut!");

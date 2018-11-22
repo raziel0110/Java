@@ -47,7 +47,7 @@ public abstract class Iphone implements Phone {
 
     }
 
-
+    @Override
     public void call(String phoneNumber){
         HistoryList historyList = new HistoryList(phoneNumber);
         calls[k] = historyList;
@@ -55,6 +55,7 @@ public abstract class Iphone implements Phone {
         System.out.println("Ati apelat: "+phoneNumber);
     }
 
+    @Override
     public void viewHistory(){
         System.out.println("calls history:");
         System.out.println("===============================");
@@ -65,6 +66,7 @@ public abstract class Iphone implements Phone {
         }
     }
 
+    @Override
     public void sendMessage(String number, String text){
         if(text.length() < 500) {
             MessageList messageList = new MessageList(number, text);
@@ -76,6 +78,7 @@ public abstract class Iphone implements Phone {
         }
     }
 
+    @Override
     public void listMessages(String number){
         System.out.println("List all messages from this "+ number +" number");
         System.out.println("====================================================");
@@ -103,5 +106,14 @@ public abstract class Iphone implements Phone {
               System.out.println("Low battery!");
           }
 
+    }
+
+    public void getBatteryLifeAfterCall(){
+        if( batteryLife > 2){
+            batteryLife -= 2;
+            System.out.println("Your battery is about: "+batteryLife+" hours time left");
+        } else {
+            System.out.println("Low battery!");
+        }
     }
 }
