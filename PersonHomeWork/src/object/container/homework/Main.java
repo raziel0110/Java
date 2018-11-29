@@ -6,6 +6,17 @@ public class Main {
 
 
     public static void main(String[] args) {
+
+        sortByName();
+        System.out.println("=============================================");
+        sortByAge();
+        System.out.println("==============================================");
+        displayHobbies();
+
+
+    }
+    public static void displayHobbies(){
+
         Person pers1 = new Employee("Gabi",33,"Jupiter");
         Person pers2 = new Employee("Alban",40,"ceva adresa");
         Person pers3 = new Unemployee("John",25,"dont know");
@@ -49,9 +60,6 @@ public class Main {
             System.out.println(entry);
         }
 
-        sortByName();
-        System.out.println("=============================================");
-        sortByAge();
 
     }
 
